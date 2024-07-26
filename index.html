@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit</title>
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div class="h-screen flex justify-center flex-col items-center">
+      <app-form></app-form>
+    </div>
+
+    <script>
+      const formDOM = document.querySelector("app-form");
+      const fields = [
+        {
+          id: "fullname",
+          type_: "text",
+          width: "100%",
+          label: "Name",
+          placeholder: "Jane Doe",
+        },
+        {
+          id: "email",
+          type_: "email",
+          width: "49%",
+          label: "Email",
+          placeholder: "janedoe@gmail.com",
+        },
+        {
+          id: "phone",
+          type_: "tel",
+          width: "49%",
+          label: "Phone",
+          placeholder: "(941) 555-0123",
+        },
+        {
+          id: "address",
+          type_: "text",
+          width: "100%",
+          label: "Address",
+          placeholder: "185 Berry St",
+        },
+        {
+          id: "city",
+          type_: "text",
+          width: "32%",
+          label: "City",
+          placeholder: "San Francisco",
+        },
+        {
+          id: "state",
+          type_: "text",
+          width: "32%",
+          label: "State",
+          placeholder: "CA",
+        },
+        {
+          id: "zip",
+          type_: "number",
+          width: "32%",
+          label: "ZIP",
+          placeholder: "94107",
+        },
+        {
+          id: "card",
+          type_: "text",
+          width: "71%",
+          label: "Card",
+          placeholder: "Card number",
+        },
+        {
+          id: "mmyy",
+          type_: "text",
+          width: "19%",
+          label: "_invisible",
+          placeholder: "MM / YY",
+        },
+        {
+          id: "cvc",
+          type_: "number",
+          width: "10%",
+          label: "_invisible",
+          placeholder: "CVC",
+        },
+      ];
+
+      formDOM.fields = fields;
+    </script>
+  </body>
+</html>
